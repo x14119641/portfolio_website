@@ -1,0 +1,14 @@
+.navbar-fixed-top {
+    top: 0;
+    border-width: 0 0 1px;
+}
+h1 {
+    color: blue;
+}
+body, footer {
+    width: 70%;
+    margin: 0 auto;
+}
+body {
+    background-color: #D3D3D3 !important;
+}

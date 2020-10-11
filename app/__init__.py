@@ -16,9 +16,9 @@ def create_app(test_config=None):
     else:
         # Load the instance config file
         app.config.from_pyfile('config.py', silent=True)
-    
+
     # Ensure the instance folder exists
-    try: 
+    try:
         os.makedirs(app.instance_path)
     except OSError:
         pass
@@ -26,9 +26,16 @@ def create_app(test_config=None):
     from . import db
     db.init_app(app)
 
+    from . import auth
+    app.register_blueprint(auth.bp)
+
+    from . import views
+    app.register_blueprint(views.bp)
+    app.add_url_rule('/', endpoint='index')
+
     # Hello
     @app.route('/hello')
     def hello():
         return 'Hello World!'
-    
+
     return app
