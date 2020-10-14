@@ -46,7 +46,6 @@ def login():
         username = request.form['username']
         print(username,' #'*6)
         password = request.form['password']
-        email = request.form['email']
         db = get_db()
         error = None
         user = db.execute(
@@ -54,7 +53,7 @@ def login():
         ).fetchone()
         print(user)
 
-        if not user:
+        if  user is None:
             error = 'Incorrect username.'
         elif not check_password_hash(user['password'], password):
             error = 'Incorrect password.'

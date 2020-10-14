@@ -17,12 +17,12 @@
     <body>
         {% include 'nav.html' %}
         <main>
-            {% for message in get_flashed_messages() %}
-                <div class="flash">{{ message }}</div>
-            {% endfor %}
+            <div class="wrap">
+            
+
 
             {% block main %}{% endblock %}
-        
+            </div>
             
         </main>
 
