@@ -2,61 +2,45 @@
 h1 {
     color: blue;
 }
+@media only screen and (max-width: 767px) {
+  .media {
+        align-items: center !important;
+    }
+} 
 
+.projects-contenidor{
+  margin: 5% auto !important;
 
+}
 
-/* Sticky Footer and body in the middle */
-html {
-    background-color: white;
+html{
+  height: 100%;
+  background-color: white;
 }
-body, html {
-    height: 100%;
-}
-body, footer {
-    width: 70%;
-    margin: 0 auto;
-}
+
 body {
-    background-color: #9C9C9C;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-   
+  background-color: #9C9C9C;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 70%;
+  margin: 0 auto;
 }
-#wrap {
-    min-height: 100%;
-    height: auto !important;
-    height: 100%;
-    /* Negative indent footer by it's height */
-    margin: 0 auto -30px;
-    background-color: green !important;
+/* Login and Register style  */
+.login {
+  margin: 5% auto !important;
+  width: 50%;
+  border: 1px solid #9C9C9C;
+  background-color: #EAEAEA;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-/* Login and Register style */
-#login .container #login-row #login-column #login-box {
-    margin-top: 120px;
-    max-width: 600px;
-    height: 320px;
-    border: 1px solid #9C9C9C;
-    background-color: #EAEAEA;
-  }
-  #login .container #login-row #login-column #login-box #login-form {
-    padding: 20px;
-  }
-  #login .container #login-row #login-column #login-box #login-form #register-link {
-    margin-top: -85px;
-  }
+.register {
+  margin: 5% auto !important;
+  width: 50%;
+  border: 1px solid #9C9C9C;
+  background-color: #EAEAEA;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 
-  #register .container #register-row #register-column #register-box {
-    margin-top: 120px;
-    max-width: 600px;
-    height: 420px;
-    border: 1px solid #9C9C9C;
-    background-color: #EAEAEA;
-  }
-  #register .container #register-row #register-column #register-box #register-form {
-    padding: 20px;
-  }
-  #register .container #register-row #register-column #register-box #register-form #register-link {
-    margin-top: -85px;
-  }
 
-  
+
+

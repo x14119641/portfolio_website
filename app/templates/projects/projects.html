@@ -1,0 +1,45 @@
+{% extends "public_template.html" %}
+
+{% block title %}Projects{% endblock %}
+{% block main %}
+
+
+<div class="projects-contenidor">
+    <div class="container">
+        
+        <div class="card-group ">
+            {% for project in data %}
+            {% if loop.index >6 %} <div class="row text-center"> {%  endif %}
+            
+            <div class="col-md-4 mt-4">
+                    <div class="card" style="width: 18rem">
+                        <img class="card-img-top" src="..." alt="{{ project['title'] }}">
+                        <div class="card-body">
+                        <h5 class="card-title">{{ project['title'] }}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">{{ project['tags'] }}</h6>
+                        <p class="card-text">{{ project['body'] }}</p>
+                        <a href="{{ project['repo'] }}" class="btn btn-primary">Github</a>
+                        {% if project['web'] %}
+                            <a href="{{ project['repo'] }}" class="card-link float-right">Website</a>
+                        {% endif %}
+                        </div>
+                    </div>
+            </div>
+            {% endfor %}
+        </div>
+        
+    </div>
+</div>
+
+{% if get_flashed_messages() %}
+  <div class="container">
+    <div class="row justify-content-center align-items-center">
+      {% for message in get_flashed_messages() %}
+        <div class="flash_error text-danger">{{ message }}</div>
+      {% endfor %} 
+    </div>
+  </div>
+{% endif %}
+
+
+{% endblock %}

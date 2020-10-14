@@ -3,8 +3,8 @@
 {% block title %}Log In{% endblock %}
 {% block main %}
 
-<div id="login">
-  <div class="container">
+<div class="container">
+  <div class="login">
       <div id="login-row" class="row justify-content-center align-items-center">
           <div id="login-column" class="col-md-6">
               <div id="login-box" class="col-md-12">
@@ -20,11 +20,11 @@
                       </div>
                       <div class="form-group">
                           <label for="remember-me" class="text-info"><span>Remember me</span> <span><input id="remember-me" name="remember-me" type="checkbox"></span></label><br>
-                          <input type="submit" name="login" class="btn btn-success btn-md" value="Login">
-                      </div>
-                      <div id="register-link" class="text-right">
-                          <a href="{{ url_for('auth.register') }}" class="text-primary">Register here</a>
-                      </div>
+                          <input type="submit" name="login" class="btn btn-success btn-md pull-right" value="Login">
+                          <div id="register-link" class="text-right">
+                            <a href="{{ url_for('auth.register') }}" class="text-primary">Register here</a>
+                        </div>
+                        </div>
                   </form>
               </div>
           </div>
